@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Talk Podcast</title>
+  <style>
+    :root {
+      --bg-gradient-dark: linear-gradient(135deg, #0f0f80, #00b894, #ff6b6b);
+      --bg-gradient-light: linear-gradient(135deg, #e0f7fa, #d1f2eb, #ffe0e0);
+      --text-dark: #ffffff;
+      --text-light: #222222;
+      --button-bg: #000000;
+      --button-text: #ffffff;
+      --highlight: #00b894;
+    }
+
+    body {
+      background: var(--bg-gradient-dark);
+      background-size: 600% 600%;
+      animation: gradientAnimation 10s ease infinite;
+      color: var(--text-dark);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    @keyframes gradientAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--highlight);
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem 2rem;
+    }
+
+    header img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .description, .pcc-hosting, .info, .partner, .available {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .links {
+      margin: 3rem 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .link-button {
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .link-button:hover {
+      background: #333333;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .coming-soon {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .discount-box {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px dashed var(--highlight);
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 600px;
+      text-align: center;
+      border-radius: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .discount-code {
+      font-size: 1.5rem;
+      color: var(--highlight);
+      margin-top: 1rem;
+      display: block;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="mode-toggle" onclick="toggleMode()">🌗 Wechseln</button>
+
+  <nav>
+    <a href="#info">Infos</a>
+    <a href="#partner">Partner</a>
+    <a href="#available">Verfügbar</a>
+  </nav>
+
+  <header>
+    <img src="https://cdn.pcchost24.de/protalk/logo.jpg" alt="Pro Talk Logo">
+    <h1>Pro Talk Podcast</h1>
+    <p>Dein Podcast für spannende Diskussionen, echte Storys und neue Perspektiven.</p>
+  </header>
+
+  <section id="info" class="info">
+    <h2 style="color:var(--highlight);">Über Pro Talk</h2>
+    <p>
+      Jede Woche neue spannende Themen, inspirierende Gespräche und Einblicke in verschiedenste Bereiche des Lebens.
+      Authentisch, direkt und ehrlich – das ist Pro Talk.
+    </p>
+  </section>
+
+  <section id="partner" class="partner">
+    <h2 style="color:var(--highlight);">Unser Partner</h2>
+    <p>
+      Pro Talk wird unterstützt von <strong>PCC Hosting</strong> – deinem zuverlässigen Anbieter für Webhosting, Gameserver und mehr!
+    </p>
+    <a class="link-button" href="https://pcchosting.de" target="_blank">Mehr über PCC Hosting</a>
+  </section>
+
+  <section id="available" class="available">
+    <h2 style="color:var(--highlight);">Jetzt anhören auf:</h2>
+    <div class="links">
+      <a class="link-button" href="https://music.amazon.de/podcasts/804bcddb-253a-47ee-aa97-44d7ac14e743/pro-talk" target="_blank">Amazon Music</a>
+      <a class="link-button" href="https://open.spotify.com/show/1HtJdryjTUbSGs9ZlMEdLN" target="_blank">Spotify</a>
+      <a class="link-button" href="https://www.youtube.com/@ProTalk_Podcast" target="_blank">YouTube</a>
+      <a class="link-button coming-soon" href="#" title="Bald verfügbar!">Apple Podcasts (Bald!)</a>
+    </div>
+  </section>
+
+  <section class="discount-box">
+    <p>Exklusiv für unsere Hörer: Spare jetzt 10% auf deinen ersten Server bei PCC Hosting!</p>
+    <span class="discount-code">Code: PROTALK10</span>
+  </section>
+
+  <footer>
+    &copy; 2025 Pro Talk Podcast | Folge uns auf deiner Lieblingsplattform
+  </footer>
+
+  <script>
+    let darkMode = true;
+
+    function toggleMode() {
+      darkMode = !darkMode;
+      if (darkMode) {
+        document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--bg-gradient-dark');
+        document.body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-dark');
+      } else {
+        document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--bg-gradient-light');
+        document.body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-light');
+      }
+    }
+  </script>
+</body>
+</html>
